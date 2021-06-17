@@ -13,13 +13,10 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -67,27 +64,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1506}
+      Script: {instanceID: 1454}
     - Class: 114
-      Script: {instanceID: 2196}
+      Script: {instanceID: 2198}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2790}
+      Script: {instanceID: 2792}
     - Class: 114
-      Script: {instanceID: 2986}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3114}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 4416}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 23890}
+      Script: {instanceID: 4420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -128,41 +125,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1506}
+      Script: {instanceID: 1454}
     - Class: 114
-      Script: {instanceID: 1700}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 2196}
+      Script: {instanceID: 1702}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2198}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2790}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2986}
+      Script: {instanceID: 2792}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3500}
+      Script: {instanceID: 3344}
     - Class: 114
-      Script: {instanceID: 3566}
+      Script: {instanceID: 3504}
     - Class: 114
-      Script: {instanceID: 3728}
+      Script: {instanceID: 3570}
     - Class: 114
-      Script: {instanceID: 4334}
+      Script: {instanceID: 3732}
     - Class: 114
-      Script: {instanceID: 4474}
+      Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 4534}
+      Script: {instanceID: 4478}
     - Class: 114
-      Script: {instanceID: 4984}
+      Script: {instanceID: 4538}
     - Class: 114
-      Script: {instanceID: 41054}
+      Script: {instanceID: 4988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,16 +179,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 5ab533713adae59372fb3e10a585c186
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AnimationPlayableAsset
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -222,6 +219,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: d6b5709b2f2f34ec0181269aaa6dbc52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HighscoreTable
   - hash:
       serializedVersion: 2
       Hash: 59ce5902048c1041729c804e2772b2ce
@@ -408,6 +411,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 59cea84a0a64504dba052442f74de3a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyController
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -744,20 +753,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 59cea84a0a64504dba052442f74de3a9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemyController
-  - hash:
-      serializedVersion: 2
-      Hash: d6b5709b2f2f34ec0181269aaa6dbc52
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HighscoreTable
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/rmass/agar 0.5/Agar.io clone.exe
+  playerPath: C:/Users/rmass/agario beta/Agar.io clone.exe

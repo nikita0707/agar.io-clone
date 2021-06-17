@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private bool onPause;
     private uint score;
     private string playerName;
+    private Vector2 playerPos;
+    private bool isSaved;
 
     public float mass;
     public Camera cam;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
         spriteRend.color = Color.HSVToRGB(PlayerPrefs.GetFloat("color"), 1, 1);
         isAlive = true;
         onPause = false;
+        isSaved = false;
         score = 0;
         playerName = PlayerPrefs.GetString("nickname");
     }
@@ -46,6 +49,17 @@ public class PlayerController : MonoBehaviour
             mousePos -= (Vector2)transform.position;
             speed = 1 / Mathf.Sqrt(scale);
             transform.Translate(mousePos * Time.deltaTime * speed);
+            playerPos = transform.position;
+            if (playerPos.x < -100f)
+                playerPos.x = -100f;
+            if (playerPos.x > 100f)
+                playerPos.x = 100f;
+            if (playerPos.y < -100f)
+                playerPos.y = -100f;
+            if (playerPos.y > 100f)
+                playerPos.y = 100f;
+            if (playerPos != (Vector2)transform.position)
+                transform.position = playerPos;
             mass -= 0.00000002f * mass * mass;
             if (mass < 1)
                 mass = 1;
@@ -94,28 +108,29 @@ public class PlayerController : MonoBehaviour
                 camSize += enemy.mass * 0.002f;
                 Destroy(collision.gameObject);
             }
-            else if (enemy.mass > mass * 1.2f)
+            else if (enemy.mass * 1.2f > mass)
             {
                 menuText.text = "Game over!";
                 panel.SetActive(true);
                 isAlive = false;
+                SaveScore();
             }
         }
-    }
-    private void OnDisable()
-    {
-        SaveScore();
     }
 
     public void SaveScore()
     {
-        GameObject highscore = GameObject.FindGameObjectWithTag("Scoreboard");
-        HighscoreTable table = highscore.GetComponent<HighscoreTable>();
-        ScoreboardItem item = new ScoreboardItem();
-        item.name = playerName;
-        item.score = score;
-        item.time = System.DateTime.Now;
-        table.scoreboardList.Add(item);
-        table.SaveScoreboard();
+        if (!isSaved)
+        {
+            GameObject highscore = GameObject.FindGameObjectWithTag("Scoreboard");
+            HighscoreTable table = highscore.GetComponent<HighscoreTable>();
+            ScoreboardItem item = new ScoreboardItem();
+            item.name = playerName;
+            item.score = score;
+            item.time = System.DateTime.Now;
+            table.scoreboardList.Add(item);
+            table.SaveScoreboard();
+            isSaved = true;
+        }
     }    
 }
