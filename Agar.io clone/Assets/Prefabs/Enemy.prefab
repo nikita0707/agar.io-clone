@@ -49,7 +49,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -74,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: 8e1b27d5078f8144ba72b233981dd9a1,
+    type: 3}
   m_Color: {r: 1, g: 0.0141509175, b: 0.30069444, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 0
   spriteRend: {fileID: 4164313920475135923}
-  nearName: 
+  score: 0
 --- !u!58 &4164313920475135925
 CircleCollider2D:
   m_ObjectHideFlags: 0
